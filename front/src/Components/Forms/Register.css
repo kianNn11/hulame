@@ -1,0 +1,466 @@
+.register-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 20%, #e0f2fe 40%, #bfdbfe 60%, #93c5fd 80%, #5998F6 100%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.register-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 50%, rgba(89,152,246,0.1) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.register-left {
+    color: #fff;
+    background: linear-gradient(135deg, #5998f6 0%, #3b82f6 50%, #2563eb 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    display: flex;
+    clip-path: ellipse(100% 100% at 0% 50%);
+    position: relative;
+    z-index: 2;
+}
+
+.register-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+    pointer-events: none;
+}
+
+.register-greetings {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}   
+
+.register-question {
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+.register-login-btn {
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 12px;
+    margin: 0 1rem 0 1rem;
+    padding: 12px 40px;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.register-login-btn:hover {
+    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%);
+    border-color: rgba(255,255,255,1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+}
+
+.register-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 0 0 0 50px;
+    padding: 2rem;
+}
+
+.register-title {
+    color: #1f2937;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 1rem 0 2rem 0;
+}
+
+.register-formFields {
+    display: flex;
+    flex-direction: column; /* <-- Stack fields vertically */
+    align-items: center; /* Optional: Center the fields horizontally */
+}
+
+.register-username,
+.register-id,
+.register-email,
+.register-cp {
+    color: #1f2937;
+    border: 2px solid rgba(89, 152, 246, 0.2);
+    border-radius: 12px;
+    width: 385px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.register-username:focus,
+.register-id:focus,
+.register-email:focus,
+.register-cp:focus,
+.register-passwordInput:focus {
+    outline: none;
+    border-color: #5998F6;
+    box-shadow: 0 0 0 3px rgba(89, 152, 246, 0.1);
+    background: rgba(255,255,255,1);
+}
+
+.register-pass {
+    color: #1f2937;
+    border: 2px solid rgba(89, 152, 246, 0.2);
+    border-radius: 12px;
+    align-items: center;
+    width: 385px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    position: relative;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.register-passwordInput {
+    border: none;
+    background: transparent;
+    width: 90%;
+    height: 100%;
+    outline: none;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+}
+
+.register-eyeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-eyeIcon {
+    width: 24px;
+    height: 24px;
+    color: #5998f6;
+}
+
+.register-terms {
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    display: flex;
+    cursor: pointer;
+}
+
+.register-text {
+    border: 1px solid #000;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.register-text2 {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.register-register-btn {
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #5998F6 0%, #3b82f6 50%, #2563eb 100%);
+    border: none;
+    border-radius: 12px;
+    width: 410px;
+    height: 52px;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(89, 152, 246, 0.4);
+    margin: 1rem 0;
+}
+
+.register-register-btn:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(89, 152, 246, 0.6);
+}
+
+.register-adminButtonContainer {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.register-adminButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 70px;
+}
+
+.register-error {
+    color: red;
+    font-size: 12px;
+    transition: opacity 0.2s ease;
+    margin-top: -20px;
+    margin-bottom: 5px
+}
+
+@media (max-width: 1024px) {
+
+    .register-greetings {
+        font-size: 40px;
+    }
+
+    .register-question {
+        font-size: 20px;
+    }
+
+    .register-register-btn {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 720px) {
+    .register-left {
+        width: 50%; /* Slightly more space for content */
+        clip-path: ellipse(100% 100% at 0% 50%);
+    }
+
+    .register-greetings {
+        font-size: 38px;
+        width: 50%; /* Let it use full container width */
+        text-align: center; /* Center the text */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+    }
+    
+
+    .register-question {
+        font-size: 16px;
+    }
+
+    .register-login-btn {
+        font-size: 24px;
+        padding: 0px 50px;
+    }
+
+    .register-logo-container {
+        width: 55%;
+        padding: 20px;
+    }
+
+    .register-logo {
+        width: 200px;
+        top: -40px;
+        right: 20px;
+    }
+
+    .register-title {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .register-formFields {
+        align-items: center;
+    }
+
+    .register-username, .register-id, .register-email,
+    .register-pass, .register-cp, 
+    .register-forgotPasswordContainer {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .register-passwordInput {
+        font-size: 14px;
+    }
+
+    .register-forgotPasswordContainer {
+        margin-top: 5px;
+    }
+
+
+    .register-errorMessage {
+        bottom: auto;
+        position: relative;
+        margin-top: -15px;
+        margin-bottom: -5px;
+        font-size: 12px;
+        width: 300px;
+    }
+
+    .register-register-btn {
+        font-size: 20px;
+        padding: 8px;
+        width: 320px;
+    }
+
+    .register-eyeIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .register-adminButtonContainer {
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .register-adminButton {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-page {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 68px;
+      height: auto;
+    }
+  
+    .register-left {
+      width: 100%;
+      height: 200px;
+      clip-path: ellipse(100% 100% at 50% 0%);
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .register-greetings {
+      font-size: 28px;
+      width: 100%;
+    }
+  
+    .register-question {
+      font-size: 16px;
+    }
+  
+    .register-reg-btn {
+      font-size: 18px;
+      padding: 0px 30px;
+    }
+  
+    .register-logo-container {
+      width: 100%;
+      padding: 20px;
+      margin-top: -20px;
+    }
+  
+    .register-logo {
+        position: relative;
+        width: 240px;
+        display: block;
+        margin: 0 auto;
+        margin-left: 20px;
+      }
+  
+    .register-title {
+      font-size: 32px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+  
+    .formFields {
+      align-items: center;
+    }
+  
+    .register-username, .register-id, .register-email,
+    .register-pass, .register-cp,
+    .forgotPasswordContainer, 
+    .register-errorMessage,
+    .register-register-btn {
+      width: 260px;
+      font-size: 14px;
+    }
+  
+    .register-register-btn {
+      font-size: 18px;
+      padding: 10px;
+    }
+  
+    .register-eyeIcon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .register-errorMessage {
+        width: 280px;
+        font-size: 10px;
+    }
+
+    .forgotPasswordContainer {
+        margin-top:0px;
+    }
+
+    .register-register-btn {
+        width: 275px;
+    }
+  
+    .register-adminButtonContainer {
+      position: relative;
+      margin-top: 20px;
+      right: 0;
+      bottom: 0;
+    }
+  
+    .register-adminButton {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+  

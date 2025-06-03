@@ -1,0 +1,622 @@
+/* ProfilePage.css - Enhanced Your Rentals Section */
+
+/* Line clamp utilities for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced Section Layout */
+.rentals-section {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.rentals-section:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Header */
+.section-header {
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #faf5ff 100%);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section-title {
+  background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+/* Premium Buttons */
+.premium-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.premium-button:hover::before {
+  left: 100%;
+}
+
+.premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(59, 130, 246, 0.5);
+}
+
+.secondary-button {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.secondary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Statistics Dashboard */
+.stats-dashboard {
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.enhanced-stats {
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.enhanced-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.enhanced-stats:hover::before {
+  opacity: 1;
+}
+
+.enhanced-stats:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Search and Filters Section */
+.filters-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.search-input {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.filter-select {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+}
+
+.filter-select:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Enhanced Rental Cards */
+.modern-card {
+  border-radius: 24px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.modern-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.modern-card:hover::before {
+  opacity: 1;
+}
+
+.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-color: #3b82f6;
+}
+
+/* Legacy rental card styles for backward compatibility */
+.rental-card {
+  animation: slideInCard 0.6s ease-out;
+  animation-fill-mode: both;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rental-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Premium Status Badges */
+.premium-badge {
+  backdrop-filter: blur(10px);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+/* Heart Button */
+.heart-button {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.heart-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Modern Action Buttons */
+.modern-button {
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.modern-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.modern-button:hover::before {
+  left: 100%;
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Legacy action button styles for backward compatibility */
+.action-button {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.action-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.action-button:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Price Highlight */
+.price-highlight {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/* Skeleton Loading */
+.skeleton-loading {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.skeleton-card {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.skeleton-image,
+.skeleton-line,
+.skeleton-button {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Premium Empty State */
+.premium-empty-state {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  border: 2px dashed #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.premium-empty-state:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Legacy empty state for backward compatibility */
+.empty-state {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Enhanced Grid Layout */
+.rental-grid {
+  animation: fadeInGrid 0.8s ease-out;
+}
+
+.rental-card:nth-child(1) { animation-delay: 0.1s; }
+.rental-card:nth-child(2) { animation-delay: 0.2s; }
+.rental-card:nth-child(3) { animation-delay: 0.3s; }
+.rental-card:nth-child(4) { animation-delay: 0.4s; }
+.rental-card:nth-child(5) { animation-delay: 0.5s; }
+.rental-card:nth-child(6) { animation-delay: 0.6s; }
+.rental-card:nth-child(7) { animation-delay: 0.7s; }
+.rental-card:nth-child(8) { animation-delay: 0.8s; }
+.rental-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Statistics card animations */
+.stats-card {
+  animation: slideInUp 0.6s ease-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.stats-card:nth-child(1) { animation-delay: 0.1s; }
+.stats-card:nth-child(2) { animation-delay: 0.2s; }
+.stats-card:nth-child(3) { animation-delay: 0.3s; }
+.stats-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Loading States */
+.loading-spinner {
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+.pulse-loader {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Image effects */
+.image-placeholder {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+
+.group:hover .group-hover\:text-blue-600 {
+  color: #2563eb;
+}
+
+/* Legacy button effects */
+.add-rental-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-rental-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.add-rental-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .rentals-section {
+    border-radius: 20px;
+  }
+  
+  .section-header {
+    padding: 24px;
+  }
+  
+  .stats-dashboard {
+    padding: 24px;
+  }
+  
+  .rental-grid {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rentals-section {
+    border-radius: 16px;
+    margin: 16px;
+  }
+  
+  .section-header {
+    padding: 20px;
+  }
+  
+  .stats-dashboard {
+    padding: 20px;
+  }
+  
+  .filters-section {
+    padding: 20px;
+  }
+  
+  .rentals-content {
+    padding: 20px;
+  }
+  
+  .rental-card-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .rental-card-actions button,
+  .rental-card-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .modern-card {
+    border-radius: 20px;
+  }
+  
+  .enhanced-stats {
+    border-radius: 16px;
+  }
+  
+  .premium-button,
+  .secondary-button {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-dashboard .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .filters-section .flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .rental-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .premium-empty-state {
+    padding: 40px 20px;
+    margin: 0 16px;
+  }
+}
+
+/* Focus states for accessibility */
+.search-input:focus,
+.filter-select:focus,
+.modern-button:focus,
+.premium-button:focus,
+.secondary-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+  .rentals-section {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  .section-header {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 50%, #1f2937 100%);
+    border-color: #374151;
+  }
+  
+  .modern-card {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+  
+  .enhanced-stats {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+}
+
+/* Performance optimizations */
+.rental-card,
+.enhanced-stats,
+.modern-button,
+.premium-button {
+  will-change: transform;
+}
+
+.rental-grid {
+  scroll-behavior: smooth;
+}
+
+/* Print styles */
+@media print {
+  .premium-button,
+  .secondary-button,
+  .heart-button {
+    display: none;
+  }
+  
+  .modern-card {
+    break-inside: avoid;
+  }
+  
+  .stats-dashboard {
+    break-inside: avoid;
+  }
+} 
